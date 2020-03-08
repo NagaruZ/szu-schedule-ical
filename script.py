@@ -134,7 +134,7 @@ class ScheduleGenerator:
         print('First day of semester set as', self.first_day_of_semester.strftime('%Y-%m-%d'))
 
     def load_class_timetable(self):
-        filenames = ['transition_period.json', 'new.json']
+        filenames = ['transition_period.json', 'new.json', 'winter.json']
         chosen = False
         filename = ''
         while not chosen:
@@ -142,10 +142,15 @@ class ScheduleGenerator:
                 'Please choose a suitable class timetable:\n'
                 '[0] Transition period timetable(applicable in 2019-2020-2 semester)\n'
                 '[1] New timetable(applicable after 2019-2020-2 semester)\n'
+                '[2] Special Arrangement(Winter timetable, during COVID-19 outbreaks)\n'
             ))
-            if choice in [0, 1]:
+            if choice in [0, 1, 2]:
                 filename = filenames[choice]
                 chosen = True
+                if choice == 2:
+                    print('You may need to regenerate the iCal file in the future\n'
+                          'since it is uncertain that how long the disease outbreak will last,\n'
+                          'as well as the special arrangement.')
             else:
                 print('Wrong input, please try again.')
         path = os.getcwd().replace(os.sep, '/') + '/class_timetable/' + filename
