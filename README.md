@@ -9,33 +9,43 @@
 - 免去第三方课表应用的流氓推广、无用社交功能，以及保持后台提醒推送时的耗电情况，实现功能的轻量化
 - 得益于云同步的功能，只需一个设备导入课表，其他关联设备都可同步显示
 
+## 如何使用此脚本
 
-## 如何运行此脚本
-```
-# 下载代码
-git clone https://github.com/NagaruZ/szu-schedule-ical.git
-cd szu-schedule-ical
+1. 下载
 
-# 创建虚拟环境
-python -m venv venv
-.\venv\Scripts\activate    # Windows
-source ./venv/bin/activate # Linux
+   - Windows用户可以直接在[这里](https://github.com/NagaruZ/szu-schedule-ical/releases)下载可执行文件，解压缩后运行```script.exe```即可；
 
-# 安装依赖
-pip install -r requirements.txt
+   - 或者，也可以采用下列步骤：
 
-# 运行
-python script.py     # Windows
-python3 script.py    # Linux
-```
-然后根据提示，依次：
-- 输入当前学期（```学年-学期号```的形式，如2019-2020学年的第二个学期，即为```2019-2020-2```）
-- 输入学期第一周的周一日期
-- 选择当前学期的课程时间安排
-- 统一认证系统的用户名（学号）及密码
-- 课前提醒时间
+   ```
+   # 下载代码
+   git clone https://github.com/NagaruZ/szu-schedule-ical.git
+   cd szu-schedule-ical
 
-操作完成后，会在脚本目录下生成```schedule.ics```。
+   # 创建虚拟环境
+   python -m venv venv
+   .\venv\Scripts\activate    # Windows
+   source ./venv/bin/activate # Linux
+
+   # 安装依赖
+   pip install -r requirements.txt
+
+   # 运行
+   python script.py     # Windows
+   python3 script.py    # Linux
+   ```
+
+2. 使用
+
+   完成上述步骤后，运行脚本，根据提示依次进行下列操作：
+
+   - 输入当前学期（```学年-学期号```的形式，如2019-2020学年的第二个学期，即为```2019-2020-2```）
+   - 输入学期第一周的周一日期
+   - 选择当前学期的课程时间安排
+   - 输入统一认证系统的用户名（学号）及密码
+   - 选择课前提醒时间
+
+   操作完成后，会在脚本所在的目录下生成```schedule.ics```。
 ## iCal文件使用方法
 请参阅[华南师范大学 iCal课表使用指引](https://i.scnu.edu.cn/ical/doc#%E5%AF%BC%E5%85%A5%E7%9A%84%E6%AD%A5%E9%AA%A4)。
 
