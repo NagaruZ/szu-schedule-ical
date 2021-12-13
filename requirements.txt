@@ -3,7 +3,7 @@ certifi==2019.11.28
 chardet==3.0.4
 ics==0.7
 idna==2.9
-lxml==4.5.0
+lxml==4.6.5
 python-dateutil==2.8.1
 pytz==2019.3
 requests==2.23.0
