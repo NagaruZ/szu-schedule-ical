@@ -1,4 +1,4 @@
-arrow==0.14.7
+arrow==0.15.1
 certifi==2019.11.28
 chardet==3.0.4
 ics==0.7
